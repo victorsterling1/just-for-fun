@@ -1,4 +1,4 @@
-It’s password cracker for zip-files or rar-files.
+It’s password cracker for zip-files or rar-files, through brute-force attack.
 
 First, you need to find a dictionary for the passwords.
 
