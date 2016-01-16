@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #Author:Victor
-#Date:2016-01-09
+#Date:2016-01-06
 
 import optparse
 import zipfile
@@ -43,9 +43,9 @@ def main():
 
 if __name__ == "__main__":
     print '''
-                 ***             Gentlemen                ***
+                 ***        Ladies and Gentlemen          ***
                  *** Welcome to use this zipfile cracker  ***
-                 ***       Created on 2016-01-09          ***
+                 ***       Created on 2016-01-06          ***
                  ***          @author : victor            ***
           '''
     main()

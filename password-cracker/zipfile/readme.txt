@@ -1,6 +1,9 @@
-It’s password cracker for zip-files or rar-files, through dictionary attack.
+It’s a password cracker for zip-files or rar-files, through dictionary attack.
 
 First, you need to find a dictionary for the passwords.
+
+Here, I recommend this source where you may find some useful dictionaries.
+http://www.darknet.org.uk/2008/02/password-cracking-wordlists-and-tools-for-brute-forcing/
 
 Second, make the zip file, the dictionary and the zipcracker.py in the same file.
 
