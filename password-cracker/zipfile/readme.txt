@@ -1,8 +1,8 @@
-It’s password cracker for zip-files or rar-files, through brute-force attack.
+It’s password cracker for zip-files or rar-files, through dictionary attack.
 
 First, you need to find a dictionary for the passwords.
 
-Second, make the zip file, the dictionary and the cracker.py in the same file.
+Second, make the zip file, the dictionary and the zipcracker.py in the same file.
 
 Third, open the terminal, move to that file, and run
             
