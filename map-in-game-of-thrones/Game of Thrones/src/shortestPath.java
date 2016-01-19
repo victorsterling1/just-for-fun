@@ -15,50 +15,49 @@ import java.util.Scanner;
 import java.util.Set;
 
 public class shortestPath {
-	// JDBC driver name and database URL
-		static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
-		static final String DB_URL = "jdbc:mysql://localhost:3306/map";
-		//url = jdbc:mysql://localhost:3306/dbname
-	    //Database credentials
-		static final String USER = "root";
-		static final String PASS = "123";
+	static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
+	static final String DB_URL = "jdbc:mysql://localhost:3306/map";
+	//url = jdbc:mysql://localhost:3306/dbname
+	//Database credentials
+	static final String USER = "root";
+	static final String PASS = "123";
 		
-		static int[] dis = new int[22];
-	    static String[] start = new String[22];
-	    static String[] end = new String[22];
-		
-	    private static class Node {  
-	        private String name;  
-	        private Map<Node,Integer> child=new HashMap<Node,Integer>();  
-	        public Node(String name){  
-	            this.name=name;  
+	static int[] dis = new int[22];
+	static String[] start = new String[22];
+	static String[] end = new String[22];
+	
+	private static class Node {  
+		private String name;  
+	    private Map<Node,Integer> child=new HashMap<Node,Integer>();  
+	    public Node(String name){  
+	    	this.name=name;  
+	    	}  
+	    public String getName() {  
+	    	return name;  
+	    	}  
+	    public void setName(String name) {  
+	    	this.name = name;  
+	    	}  
+	    public Map<Node, Integer> getChild() {  
+	    	return child;  
 	        }  
-	        public String getName() {  
-	            return name;  
-	        }  
-	        public void setName(String name) {  
-	            this.name = name;  
-	        }  
-	        public Map<Node, Integer> getChild() {  
-	            return child;  
-	        }  
-	        public void setChild(Map<Node, Integer> child) {  
-	            this.child = child;  
+	    public void setChild(Map<Node, Integer> child) {  
+	    	this.child = child;  
 	        }  
 	    }
-	    private static Node CB =new Node("Castle Black");  
-	    private static Node WF =new Node("Winterfell"); 
-	    private static Node TT =new Node("The Twins"); 
-	    private static Node E =new Node("Eyrie"); 
-	    private static Node P =new Node("Pyke"); 
-	    private static Node R =new Node("RiverRun"); 
-	    private static Node K =new Node("Kings Landing"); 
-	    private static Node CR =new Node("Casterly Rock"); 
-		private static Node H =new Node("Highgarden"); 
-		private static Node startNode, endNode;
-		private static Set<Node> open=new HashSet<Node>();  
-	    private static HashMap<Node,Integer> base = new HashMap<Node, Integer>();
-	    private static HashMap<Integer, String> res = new HashMap<Integer, String>();
+	private static Node CB =new Node("Castle Black");  
+	private static Node WF =new Node("Winterfell"); 
+	private static Node TT =new Node("The Twins"); 
+	private static Node E =new Node("Eyrie"); 	    
+	private static Node P =new Node("Pyke"); 	    
+	private static Node R =new Node("RiverRun"); 	    
+	private static Node K =new Node("Kings Landing"); 	    
+	private static Node CR =new Node("Casterly Rock"); 		
+	private static Node H =new Node("Highgarden"); 		
+	private static Node startNode, endNode;		
+	private static Set<Node> open=new HashSet<Node>();  	    
+	private static HashMap<Node,Integer> base = new HashMap<Node, Integer>();
+	private static HashMap<Integer, String> res = new HashMap<Integer, String>();
 		
 	public static void main(String[] args){
 		
@@ -75,7 +74,6 @@ public class shortestPath {
 		
 		loadData();
 	    buildMap(start,end,open);
-		//shortest(startNode,endNode);
 	    getPath(startNode,endNode,startNode.getName(),0);
 		int distance = Integer.MAX_VALUE;
 	    for(Integer i : res.keySet()){
@@ -83,14 +81,6 @@ public class shortestPath {
 		}
 	    System.out.println("The shortest distance is "+ distance+" miles.");
 	    System.out.println("The best path is "+ res.get(distance));
-		
-		
-		
-		
-		
-		//String path = shortestPath(end,start,type);
-		//System.out.println("Your best travel path is "+ path);
-		//System.out.println("The total distance is " );
 	}
 	
 	
